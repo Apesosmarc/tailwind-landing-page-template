@@ -66,7 +66,7 @@ export default function Hero() {
             />
           </a>
         </nav>
-        <ul className="flex grow justify-end flex-wrap items-center mt-10">
+        <ul className="flex flex-col grow justify-end flex-wrap items-center mt-10 gap-4">
           <li>
             <Link
               href="/signup"
@@ -74,6 +74,15 @@ export default function Hero() {
               className="p-2 w-[200px] text-gray-200 hover:bg-gray-800 ml-3 flex flex-col items-center border border-transparent rounded leading-snug transition duration-150 ease-in-out"
             >
               Buy Merchandise
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/signup"
+              style={{ backgroundColor: PURPLE_OVERLAY }}
+              className="p-2 w-[200px] text-gray-200 hover:bg-gray-800 ml-3 flex flex-col items-center border border-transparent rounded leading-snug transition duration-150 ease-in-out"
+            >
+              Look At Our Shows Or Something IDK
             </Link>
           </li>
         </ul>
