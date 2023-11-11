@@ -6,6 +6,7 @@ import Link from "next/link";
 import Logo from "./logo";
 import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
+import { PURPLE_OVERLAY } from "@/constants";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
@@ -37,18 +38,11 @@ export default function Header() {
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
                 <Link
-                  href="/signin"
-                  className="font-medium px-5 py-3 flex items-center transition duration-150 ease-in-out text-gray-200  hover:bg-gray-800"
-                >
-                  Sign in
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/signup"
-                  className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
+                  style={{ backgroundColor: PURPLE_OVERLAY }}
+                  className="btn-sm text-gray-200 hover:bg-gray-800 ml-3"
                 >
-                  <span>Sign up</span>
+                  <span>Merch</span>
                   <svg
                     className="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1"
                     viewBox="0 0 12 12"

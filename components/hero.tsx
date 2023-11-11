@@ -1,9 +1,11 @@
+import { PURPLE_OVERLAY } from "@/constants";
+
 export default function Hero() {
   return (
-    <section className="relative h-screen flex justify-center ">
+    <section className="relative h-screen flex justify-center">
       <div className="video-container min-w-full relative h-full object-cover">
         <div
-          style={{ backgroundColor: "#a13073" }}
+          style={{ backgroundColor: PURPLE_OVERLAY }}
           className="overlay h-full w-full absolute top-0 left-0 opacity-30"
         ></div>
         <video
@@ -23,11 +25,11 @@ export default function Hero() {
       </div>
 
       {/* Socials*/}
-      <div className="absolute top-1/4 w-full flex flex-col justify-center items-center">
+      <div className="absolute top-20 w-full flex flex-col justify-center items-center">
         <img
           src="/images/GM-Logo_multicolor.png"
           alt="Guess Method Main Logo"
-          className="hero-logo mb-12 lg:w-1/4 w-3/4"
+          className="hero-logo mb-12 lg:w-1/4 md:w- 2/4 w-1/2"
         />
         <nav
           className="
