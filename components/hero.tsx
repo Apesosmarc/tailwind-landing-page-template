@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PURPLE_OVERLAY } from "@/constants";
 
 export default function Hero() {
@@ -25,11 +26,11 @@ export default function Hero() {
       </div>
 
       {/* Socials*/}
-      <div className="absolute top-20 w-full flex flex-col justify-center items-center">
+      <div className="absolute top-10 w-full flex flex-col justify-center items-center">
         <img
           src="/images/GM-Logo_multicolor.png"
           alt="Guess Method Main Logo"
-          className="hero-logo mb-12 lg:w-1/4 md:w- 2/4 w-1/2"
+          className="hero-logo mb-12 lg:w-1/4 md:w- 2/4 w-[300px] min-w-[300px]"
         />
         <nav
           className="
@@ -65,7 +66,33 @@ export default function Hero() {
             />
           </a>
         </nav>
+        <ul className="flex grow justify-end flex-wrap items-center mt-10">
+          <li>
+            <Link
+              href="/signup"
+              style={{ backgroundColor: PURPLE_OVERLAY }}
+              className="p-2 w-[200px] text-gray-200 hover:bg-gray-800 ml-3 flex flex-col items-center border border-transparent rounded leading-snug transition duration-150 ease-in-out"
+            >
+              Buy Merchandise
+            </Link>
+          </li>
+        </ul>
       </div>
+
+      <svg
+        style={{
+          transform: "rotateY(0deg) rotate(90deg)",
+          top: "calc(100% - 60px)",
+        }}
+        className="w-6 h-6 fill-current text-gray-200 shrink-0 ml-2 -mr-1 absolute cursor-pointer"
+        viewBox="0 0 12 12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+          fillRule="nonzero"
+        />
+      </svg>
     </section>
   );
 }
